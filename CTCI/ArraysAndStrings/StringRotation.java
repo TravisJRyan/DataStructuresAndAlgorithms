@@ -15,6 +15,8 @@ public class StringRotation{
     }
 
     // Double the first string so that it contains the secondString (if rotation) and return isSubstring
+    // O(1) - a few statements of constant work
+    // O(3N) space - storing another string with double the value of the first, plus the second string storage (negligible)
     public static boolean isRotation(String firstString, String secondString){
         int firstStringLength = firstString.length();
         if(firstStringLength==secondString.length() && firstStringLength!=0){
@@ -27,6 +29,4 @@ public class StringRotation{
     public static boolean isSubstring(String smallerString, String largerString){
         return largerString.contains(smallerString);
     }
-
-
 }
