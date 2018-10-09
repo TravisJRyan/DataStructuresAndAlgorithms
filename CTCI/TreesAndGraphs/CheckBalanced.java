@@ -1,9 +1,9 @@
 /* 
-    4.1 Is Balanced - Write a method to determine if a tree is balanced. For purposes of this question,
+    4.4 Check Balanced - Write a method to determine if a tree is balanced. For purposes of this question,
     a balanced tree can be defined by a tree where no two leaf nodes differ in height by more than one.
 */
 
-public class IsBalanced{
+public class CheckBalanced{
     public static void main(String[] args){
         BinarySearchTree<Integer> trueExampleTree = new BinarySearchTree<Integer>();
         trueExampleTree.add(50);
@@ -31,13 +31,13 @@ public class IsBalanced{
         return (maxDepth(tree.root) - minDepth(tree.root) <= 1);
     }
 
-    public static int minDepth(BinarySearchTree<Integer>.BSTNode<Integer> root){
+    public static int minDepth(BSTNode<Integer> root){
         if(root==null)
             return 0;
         return 1 + Math.min(minDepth(root.left), minDepth(root.right));
     }
 
-    public static int maxDepth(BinarySearchTree<Integer>.BSTNode<Integer> root){
+    public static int maxDepth(BSTNode<Integer> root){
         if(root==null)
             return 0;
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
