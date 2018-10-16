@@ -2,18 +2,18 @@ import java.util.ArrayList;
 
 public class Node {
 
+    public enum State{
+        Unvisited, Visiting, Visited
+    }
+
     public int value;
     public ArrayList<Node> adjacent;
     State state;
 
     public Node(int value){ 
         this.value = value;
+        this.state = State.Unvisited;
         adjacent = new ArrayList<Node>();
-        state = State.Unvisited;
-    }
-
-    public void addAdjacentDirected(Node newAdject){
-        adjacent.add(newAdjacent);
     }
 
     public void addAdjacent(Node newAdjacent){
