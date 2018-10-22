@@ -32,7 +32,7 @@ public class RobotInGrid{
     // O(2^(N+M)) time because of branching 2 and depth of solution N+M
     // recursive solution stops once out of bounds or once a wall has been hit
     public static void findPath(int[][] grid, int i, int j, String pathFound){
-        if(i==grid.length-1 && j==grid[i].length-1){
+        if(i==grid.length-1 && j==grid[i].length-1){ // path found
             System.out.println(pathFound);
         } 
         if(i >= grid.length || j >= grid[i].length || grid[i][j] == 1)

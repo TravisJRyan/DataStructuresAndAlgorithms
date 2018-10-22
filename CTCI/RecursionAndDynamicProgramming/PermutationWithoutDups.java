@@ -11,6 +11,7 @@ public class PermutationWithoutDups{
             System.out.println(permutation);
         
         System.out.println("\n================\n");
+        
         ArrayList<String> perms2 = getPermutations("abc");
         for(String permutation: perms2)
             System.out.println(permutation);
